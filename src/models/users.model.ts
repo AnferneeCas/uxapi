@@ -16,7 +16,7 @@ export default function (app: Application): typeof Model {
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       admin: {
         type: DataTypes.BOOLEAN,
@@ -24,7 +24,7 @@ export default function (app: Application): typeof Model {
         defaultValue: false,
       },
 
-      googleId: { type: DataTypes.STRING },
+      githubId: { type: DataTypes.STRING },
     },
     {
       hooks: {

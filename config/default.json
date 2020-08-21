@@ -10,10 +10,7 @@
     "entity": "user",
     "service": "users",
     "secret": "W7jm7rT5Y58ocTiF+1BhO1mJVjs=",
-    "authStrategies": [
-      "jwt",
-      "local"
-    ],
+    "authStrategies": ["jwt", "local", "github"],
     "jwtOptions": {
       "header": {
         "typ": "access"
@@ -32,11 +29,12 @@
       "google": {
         "key": "<google oauth key>",
         "secret": "<google oauth secret>",
-        "scope": [
-          "email",
-          "profile",
-          "openid"
-        ]
+        "scope": ["email", "profile", "openid"]
+      },
+
+      "github": {
+        "key": "68a5f31eeae9dfb07c1b",
+        "secret": "47c2b1e59110f23cf6a674a84cbc9ece95be7157"
       }
     }
   },
