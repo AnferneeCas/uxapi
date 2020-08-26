@@ -45,7 +45,7 @@ export class Order implements ServiceMethods<Data> {
     console.log(data);
     var results= data.cart
     var content = results.reduce(function(a:any, b:any) {
-      return a + '<tr><td>' + b.name + '</a></td><td>' + b.description + '</td><td>' + b.qt + '</td><td>' + b.price*b.qt + '</td></tr>';
+      return a + '<tr><td>' + b.name + '</a></td><td><p>' + b.description + '</p></td><td>' + b.qt + '</td><td>' + b.price*b.qt + '</td></tr>';
     }, '');
 
     const mailOptions = {
@@ -69,8 +69,8 @@ export class Order implements ServiceMethods<Data> {
               </table>
           </div>
           
-          <div>Total a pagar:`+data.total+`</h3></div>
-          <div><h3> de entrega:`+data.total+`</h3></div>
+          <div><h3>Total a pagar: `+data.total+`</h3></div>
+          <div><h3>Direccion de entrega:`+data.direccion+`</h3></div>
           </strong>
           `
           
